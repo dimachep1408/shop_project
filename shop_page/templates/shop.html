@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('shop.static', filename = '/static/css/styles.css')}}"/>
+{% endblock %}
+
+{% block content %}
+
+    <h2>{{log}}</h2>
+    <a class = "a1" href="http://127.0.0.1:5000/main2/">HOME</a>
+    <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
+    <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
+    <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
+
+
+
+    {% for product in products %}
+
+        
+        <img class = "img{{ product.count }}" src="{{ url_for('shop.static', filename= 'static/images/' + product.image) }}" alt="shop">
+        <div class="div{{ product.count }}">
+            <p class = "p{{ product.count }}_1">{{ product.name }}</p>
+            <p class = "p{{ product.count }}_2"><del>{{ product.price }} грн</del></p>
+            <p class = "disc_{{ product.count }}">Знижка 19%</p>
+            <p class = "final_price_{{ product.count }}">{{ product.final_price }} грн</p>
+            <button class = "button{{ product.count }}_3"  onclick="javascript:indicator(); javascript:buy_{{ product.count }}();javascript:counter()">КУПИТИ</button>
+            <p class = "p{{ product.count }}_4">Ємність:</p>
+            <p class = "p{{ product.count }}_5"></p>
+            <p class="p{{ product.count }}_5_1">256 Гб</p>
+            <p class = "p{{ product.count }}_6"></p>
+            <p class="p{{ product.count }}_6_1">512 Гб</p>
+            <p class = "p{{ product.count }}_7"></p>
+            <p class="p{{ product.count }}_7_1">1 Тб</p>
+            <p class = "p{{ product.count }}_8">ТОВАР В НАЯВНОСТІ</p>
+        </div>
+<!-- 
+        <img class = "img2" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
+        <div class="div2">
+            <p class = "p2_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
+            <p class = "p2_2"><del>56 999 грн</del></p>
+            <p class = "disc_2">Знижка 19%</p>
+            <p class = "final_price_2">10 830 грн</p>
+            <button class = "button2_3"  onclick="javascript:indicator(); javascript:buy_2();javascript:counter()">КУПИТИ</button>
+            <p class = "p2_4">Ємність:</p>
+            <p class = "p2_5"></p>
+            <p class="p2_5_1">256 Гб</p>
+            <p class = "p2_6"></p>
+            <p class="p2_6_1">512 Гб</p>
+            <p class = "p2_7"></p>
+            <p class="p2_7_1">1 Тб</p>
+            <p class = "p2_8">ТОВАР В НАЯВНОСТІ</p>
+        </div>
+
+        <img class = "img3" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
+        <div class = "div3">
+            <p class = "p3_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
+            <p class = "p3_2"><del>66 999 грн</del></p>
+            <p class = "disc_3">Знижка 19%</p>
+            <p class = "final_price_3">12 730 грн</p>
+            <button class = "button3_3" onclick="javascript:indicator(); javascript:buy_3();javascript:counter()">КУПИТИ</button>
+            <p class = "p3_4">Ємність:</p>
+            <p class = "p3_5"></p>
+            <p class="p3_5_1">256 Гб</p>
+            <p class = "p3_6"></p>
+            <p class="p3_6_1">512 Гб</p>
+            <p class = "p3_7"></p>
+            <p class="p3_7_1">1 Тб</p>
+            <p class = "p3_8">ТОВАР В НАЯВНОСТІ</p>    
+        </div> -->
+
+    {% endfor %}
+
+
+
+    
+
+    <img class = "img4" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+
+    <img class = "img5" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+
+    <img class = "img6" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+
+    <p class = "count" id = "count"></p>
+
+    <p class="border" id="border"></p>
+
+
+
+    <script>
+
+        var count = 0
+        let current_cookie = document.cookie.split("=")[1]
+
+
+              
+        function counter(){
+            count++;
+            var outputElement = document.getElementById("count")
+            if (current_cookie.split(" ").length > 9){
+                outputElement.style.left = "477px"
+            }
+            
+            if (count >= 100){
+                count -= 1 
+            }
+
+            outputElement.textContent = current_cookie.split(" ").length
+        }
+        
+        function indicator(){
+            var element = document.getElementById("border")
+
+            element.style.display = "block"
+
+        }
+
+
+
+        function buy_1(){
+            current_cookie += "1" + " "
+            document.cookie = `product = ${current_cookie}; path = /`        
+            console.log(current_cookie)
+        }
+
+        function buy_2(){
+            current_cookie += "2" + " "
+            document.cookie = `product = ${current_cookie}; path = /`
+            console.log(current_cookie)
+        }
+
+    
+        function buy_3(){
+            current_cookie += "3" + " "
+            document.cookie = `product = ${current_cookie}; path = /`
+            console.log(current_cookie)
+        }
+
+        
+
+    </script>
+
+{% endblock %}
