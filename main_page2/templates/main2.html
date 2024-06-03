@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('main2.static', filename = '/static/css/styles.css')}}"/>
+{% endblock %}
+
+{% block content %}
+
+    <h2>{{log}}</h2>
+    <a class = "home" href="http://127.0.0.1:5000/main2/">HOME</a>
+    <a class="shop" href="http://127.0.0.1:5000/shop/">SHOP</a>
+    <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
+    <a class="a4" href="http://127.0.0.1:5000/basket/">CONTACTS</a>
+        
+    <p>HOME PAGE</p>
+{% endblock %}
