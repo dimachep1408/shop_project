@@ -1,0 +1,84 @@
+p{
+    position: absolute;
+    left: 35%;
+    top: 300;
+    font-size : 100 ;
+    font-family: sans-serif;
+
+}
+
+.a3{
+    position: absolute;
+    top: 5;
+    left: 400;
+    color: #000000;
+    font-size: 24;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.a4{
+    position: absolute;
+    top: 5;
+    left: 550;
+    color: #000000;
+    text-decoration: none;
+    font-size: 24;
+    font-family: sans-serif;
+
+
+}
+
+.home{
+    position: absolute;
+    top: 5;
+    font-size: 24px;
+    font-family: sans-serif;
+    left: 50;
+    font-weight: 700;
+}
+
+.shop{
+    position: absolute;
+    top: 5;
+    font-size: 24px;
+    font-family: sans-serif;
+    left: 225;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+    
+}
+/* .optgroup1{
+    position: relative;
+    margin-left: 500;
+} */
+
+/* .a1{
+    position: absolute;
+    margin-top: 0;
+    margin-left: 1500;
+    color: #000000;
+    position: relative;
+    font-size: 24;
+
+}
+
+.a2{
+    position: absolute;
+    margin-top: 0;
+    margin-left: 30;
+    color: #000000;
+    font-size: 24;
+
+} */
+
+h2{
+    position: absolute;
+    left: 1800px;
+    top: -15;
+    font-family: sans-serif;
+    font-weight: 700;
+}

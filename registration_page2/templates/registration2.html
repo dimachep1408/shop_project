@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('registration2.static', filename = 'static/css/styles2.css')}}">
+{% endblock %}
+
+{% block content %}
+
+    <p class = "confirmed">CONFIRMED</p>
+    <p class = "ramka"></p>
+    <a href="http://127.0.0.1:5000/login/">--> AUTHORIZATION</a>
+
+    <form method="post">
+
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h1>SEND</h1>
+        <h3></h3>
+<!-- 
+        <button>SEND</button> -->
+    </form>
+
+    <p class = "login">Login</p>
+    <p class = "email">Email</p>
+    <p class = "password">Password</p>
+    <p class = "password">Password_confirm</p>
+    
+{% endblock %}

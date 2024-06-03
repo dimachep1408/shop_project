@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('login2.static', filename = 'static/css/styles2.css')}}">
+{% endblock %}
+
+{% block content %}
+
+        <p class = "p_not" ></p>
+        <p class="p_not2">YOU ARE NOT<br>   REGISTERED</br></p>
+
+    <a href="http://127.0.0.1:5000/registration/">--> REGISTRATION</a>
+    <form method="post">
+
+        <input type="text" required name = "name_or_email" class = name>
+        <input type="password" required name="password" class="password_label">
+       
+        <button>SEND</button>
+    </form>
+
+    <p class = "login">Login or email</p>
+    <p class = "password">Password</p>
+
+
+    
+{% endblock %}

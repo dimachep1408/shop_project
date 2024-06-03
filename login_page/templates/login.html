@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('login.static', filename = 'static/css/styles2.css')}}">
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+
+        <input type="text" required name = "name_or_email" class = name>
+        <input type="password" required name="password" class="password_label">
+       
+        <button>SEND</button>
+    </form>
+
+    <p class = "login">Login or email</p>
+    <p class = "password">Password</p>
+
+    
+{% endblock %}

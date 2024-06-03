@@ -1,0 +1,72 @@
+form {
+    position: relative;
+    margin-left: 725;
+    margin-top: 325;
+    border: 3px solid black;
+    width : 450px;  
+    border-radius: 25px; 
+    height: 355;
+}
+
+.name{
+    position: relative;
+    margin-top: 59;
+
+}
+
+
+
+input {
+    margin-top: 54px;
+    margin-bottom: 10px;
+    margin-left: 40;
+    padding: 1px;
+    width: 370px;
+    height: 56px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: block; /* Добавлено для того, чтобы input отображался как блочный элемент */
+    font-family: sans-serif;
+}
+
+button {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 123;
+    width: 204px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+
+
+.login{
+    position: relative;
+    margin-left: 750;
+    margin-top: -355;
+    font-size: 24;
+    font-family: sans-serif;
+}
+
+.email{
+    position: relative;
+    margin-left: 750;
+    margin-top: 83;
+    font-size: 24;
+    font-family: sans-serif;
+}
+
+.password{
+    position: relative;
+    margin-left: 750;
+    margin-top: 83;
+    font-size: 24;
+    font-family: sans-serif;
+}
+
+p{
+    position: relative;
+    margin-top: 200;
+}

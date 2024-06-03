@@ -1,0 +1,446 @@
+{% extends "base.html" %}
+
+{% block title %}Page Home{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('basket.static', filename = '/static/css/styles.css')}}"/>
+{% endblock %}
+
+{% block content %}
+
+    <h2>{{log}}</h2>
+    <a class = "a1" href="http://127.0.0.1:5000/main2/">HOME</a>
+    <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
+    <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
+    <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
+
+    <button class="button1-" onclick="javascript:minus1Button()">-</button>
+    <button class="button2-" onclick="javascript:minus2Button()">-</button>
+    <button class="button3-" onclick="javascript:minus3Button()">-</button>
+
+    <button class="button1" onclick="javascript:plus1Button()">+</button>
+    <button class="button2" onclick="javascript:plus2Button()">+</button>
+    <button class="button3" onclick="javascript:plus3Button()">+</button>\
+
+    {% for product in products %}
+
+        <img src="{{ url_for('basket.static', filename= 'static/images/' + product.image) }}" alt="basket" class="img{{product.id}}">
+    <!-- <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img2">
+    <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img3"> -->
+
+        <p class="product{{product.id}}">{{ product.name}}...</p>
+    <!-- <p class="product2">iPhone 15 Pro Max 512GB Natural Titanium...</p>
+    <p class="product3">iPhone 15 Pro Max 1TB Natural Titanium...</p> -->
+
+        <p class="price{{product.id}}">{{ product.price }} грн</p>
+    <!-- <p class="price2">56 999 грн</p>
+    <p class="price3">66 999 грн</p>     -->
+    
+        <p class="border{{product.id}}"></p>
+    <!-- <p class="border2"></p>
+    <p class="border3"></p> -->
+
+    {% endfor %}
+
+    <button class = "order">ПЕРЕЙТИ ДО ОФОРМЛЕННЯ</button>
+
+
+    <p class="border" id="border"></p>
+
+    <script>
+
+
+
+    function plus1Button(){
+        
+        let first_product = 0
+        let second_product = 0
+        let third_product = 0
+        let current_cookie = document.cookie.split("=")[1]
+
+
+
+
+        current_cookie += " " + "1"
+        document.cookie = `product = ${current_cookie}; path = /`        
+        console.log(current_cookie)
+    
+        for (let count = 0; count < document.cookie.length; count++) {
+            if (document.cookie[count] == "1") {
+    
+                first_product++
+            }
+            if (document.cookie[count] == "2") {
+    
+                second_product++
+            }
+            if (document.cookie[count] == "3") {
+                third_product++
+    
+            }
+        }
+    
+        
+
+        name1.textContent = `${first_product}`;
+
+
+        name2.textContent = `${second_product}`;
+
+
+        name3.textContent = `${third_product}`;
+
+    
+        location.reload()
+    }
+
+    function plus2Button(){
+        
+        let first_product = 0
+        let second_product = 0
+        let third_product = 0
+        let current_cookie = document.cookie.split("=")[1]
+
+        current_cookie += " " + "2"
+        document.cookie = `product = ${current_cookie}; path = /`        
+        console.log(current_cookie)
+    
+        for (let count = 0; count < document.cookie.length; count++) {
+            if (document.cookie[count] == "1") {
+    
+                first_product++
+            }
+            if (document.cookie[count] == "2") {
+    
+                second_product++
+            }
+            if (document.cookie[count] == "3") {
+                third_product++
+    
+            }
+        }
+    
+        
+
+        name1.textContent = `${first_product}`;
+
+
+        name2.textContent = `${second_product}`;
+
+
+        name3.textContent = `${third_product}`;
+
+        location.reload()
+
+    }
+
+    function plus3Button(){
+        
+        let first_product = 0
+        let second_product = 0
+        let third_product = 0
+        let current_cookie = document.cookie.split("=")[1]
+
+        current_cookie += " " + "3"
+        document.cookie = `product = ${current_cookie}; path = /`        
+        console.log(current_cookie)
+    
+        for (let count = 0; count < document.cookie.length; count++) {
+            if (document.cookie[count] == "1") {
+    
+                first_product++
+            }
+            if (document.cookie[count] == "2") {
+    
+                second_product++
+            }
+            if (document.cookie[count] == "3") {
+                third_product++
+    
+            }
+        }
+    
+        
+
+        name1.textContent = `${first_product}`;
+
+
+        name2.textContent = `${second_product}`;
+
+
+        name3.textContent = `${third_product}`;
+
+        location.reload()
+
+    }
+
+    
+    function minus1Button() {
+        
+        let first_product = 0;
+        let second_product = 0;
+        let third_product = 0;
+        let current_cookie = document.cookie.split("=")[1].trim().split(" ");
+    
+        let one_numbers = "";
+        let two_numbers = "";
+        let three_numbers = "";
+    
+        if (current_cookie[0] == "1") {
+            console.log("asdfdasf");
+        }
+    
+        for (let count = 0; count < current_cookie.length; count++) {
+            console.log(current_cookie[count]);
+            if (current_cookie[count] == "1") {
+                one_numbers += " 1";
+            }
+            if (current_cookie[count] == "2") {
+                two_numbers += " 2";
+            }
+            if (current_cookie[count] == "3") {
+                three_numbers += " 3";
+            }
+        }
+    
+        // Уменьшение количества одного продукта "1"
+        if (one_numbers.length > 0) {
+            one_numbers = one_numbers.slice(0, one_numbers.length - 2);
+        }
+    
+        current_cookie = "";
+        for (let count = 0; count < one_numbers.length; count += 2) {
+            current_cookie += " 1";
+        }
+        for (let count = 0; count < two_numbers.length; count += 2) {
+            current_cookie += " 2";
+        }
+        for (let count = 0; count < three_numbers.length; count += 2) {
+            current_cookie += " 3";
+        }
+    
+        document.cookie = `product=${current_cookie.trim()}; path=/`;
+        console.log(current_cookie);
+        console.log(one_numbers, two_numbers, three_numbers);
+    
+        first_product = (current_cookie.match(/1/g) || []).length;
+        second_product = (current_cookie.match(/2/g) || []).length;
+        third_product = (current_cookie.match(/3/g) || []).length;
+    
+        name1.textContent = `${first_product}`;
+        name2.textContent = `${second_product}`;
+        name3.textContent = `${third_product}`;
+        location.reload()
+    }
+    
+
+
+    function minus2Button() {
+        
+        let first_product = 0;
+        let second_product = 0;
+        let third_product = 0;
+        let current_cookie = document.cookie.split("=")[1].trim().split(" ");
+    
+        let one_numbers = "";
+        let two_numbers = "";
+        let three_numbers = "";
+    
+        if (current_cookie[0] == "1") {
+            console.log("asdfdasf");
+        }
+    
+        // Разделение чисел на группы
+        for (let count = 0; count < current_cookie.length; count++) {
+            console.log(current_cookie[count]);
+            if (current_cookie[count] == "1") {
+                one_numbers += " 1";
+            }
+            if (current_cookie[count] == "2") {
+                two_numbers += " 2";
+            }
+            if (current_cookie[count] == "3") {
+                three_numbers += " 3";
+            }
+        }
+    
+        // Уменьшение количества одного продукта "2"
+        if (two_numbers.length > 0) {
+            two_numbers = two_numbers.slice(0, two_numbers.length - 2); // Убираем одну "2"
+        }
+    
+        // Пересоздание строки current_cookie из отдельных строк
+        current_cookie = "";
+        for (let count = 0; count < one_numbers.length; count += 2) {
+            current_cookie += " 1";
+        }
+        for (let count = 0; count < two_numbers.length; count += 2) {
+            current_cookie += " 2";
+        }
+        for (let count = 0; count < three_numbers.length; count += 2) {
+            current_cookie += " 3";
+        }
+    
+        // Обновление куки
+        document.cookie = `product=${current_cookie.trim()}; path=/`;
+        console.log(current_cookie);
+        console.log(one_numbers, two_numbers, three_numbers);
+    
+        // Подсчет количества каждого продукта в куки
+        first_product = (current_cookie.match(/1/g) || []).length;
+        second_product = (current_cookie.match(/2/g) || []).length;
+        third_product = (current_cookie.match(/3/g) || []).length;
+    
+        // Обновление содержимого элементов на странице
+        name1.textContent = `${first_product}`;
+        name2.textContent = `${second_product}`;
+        name3.textContent = `${third_product}`;
+        location.reload()
+    }
+    
+    
+    function minus3Button() {
+        
+        let first_product = 0;
+        let second_product = 0;
+        let third_product = 0;
+        let current_cookie = document.cookie.split("=")[1].trim().split(" ");
+    
+        let one_numbers = "";
+        let two_numbers = "";
+        let three_numbers = "";
+    
+        if (current_cookie[0] == "1") {
+            console.log("asdfdasf");
+        }
+    
+        // Разделение чисел на группы
+        for (let count = 0; count < current_cookie.length; count++) {
+            console.log(current_cookie[count]);
+            if (current_cookie[count] == "1") {
+                one_numbers += " 1";
+            }
+            if (current_cookie[count] == "2") {
+                two_numbers += " 2";
+            }
+            if (current_cookie[count] == "3") {
+                three_numbers += " 3";
+            }
+        }
+    
+        // Уменьшение количества одного продукта "3"
+        if (three_numbers.length > 0) {
+            three_numbers = three_numbers.slice(0, three_numbers.length - 2); // Убираем одну "3"
+        }
+    
+        // Пересоздание строки current_cookie из отдельных строк
+        current_cookie = "";
+        for (let count = 0; count < one_numbers.length; count += 2) {
+            current_cookie += " 1";
+        }
+        for (let count = 0; count < two_numbers.length; count += 2) {
+            current_cookie += " 2";
+        }
+        for (let count = 0; count < three_numbers.length; count += 2) {
+            current_cookie += " 3";
+        }
+    
+        // Обновление куки
+        document.cookie = `product=${current_cookie.trim()}; path=/`;
+        console.log(current_cookie);
+        console.log(one_numbers, two_numbers, three_numbers);
+    
+        // Подсчет количества каждого продукта в куки
+        first_product = (current_cookie.match(/1/g) || []).length;
+        second_product = (current_cookie.match(/2/g) || []).length;
+        third_product = (current_cookie.match(/3/g) || []).length;
+    
+        // Обновление содержимого элементов на странице
+        name1.textContent = `${first_product}`;
+        name2.textContent = `${second_product}`;
+        name3.textContent = `${third_product}`;
+
+        location.reload()
+    }
+    
+
+    let first_product = 0
+    let second_product = 0
+    let third_product = 0
+
+    for (let count = 0; count < document.cookie.length; count++) {
+        if (document.cookie[count] == "1") {
+
+            first_product++
+        }
+        if (document.cookie[count] == "2") {
+
+            second_product++
+        }
+        if (document.cookie[count] == "3") {
+            third_product++
+
+        }
+    }
+
+    
+    const name1 = document.createElement("p");
+    name1.textContent = `${first_product}`;
+    name1.classList.add("p1");
+    document.body.appendChild(name1);    
+    
+    const name2 = document.createElement("p");
+    name2.textContent = `${second_product}`;
+    name2.classList.add("p2");
+    document.body.appendChild(name2);    
+    
+    const name3 = document.createElement("p");
+    name3.textContent = `${third_product}`;
+    name3.classList.add("p3");
+    document.body.appendChild(name3); 
+
+    const fourProducts = document.createElement("h1");
+    fourProducts.textContent = `4-и товари на суму `;
+    fourProducts.classList.add("h1_1");
+    document.body.appendChild(fourProducts); 
+
+
+    const fourProductsNum = document.createElement("h1");
+    fourProductsNum.textContent = `${(first_product * 49999 + second_product * 56999 + third_product * 66999).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн`;
+    fourProductsNum.classList.add("h1_2");
+    document.body.appendChild(fourProductsNum); 
+
+    const discount = document.createElement("h1");
+    discount.textContent = `Знижка`;
+    discount.classList.add("h1_3");
+    document.body.appendChild(discount); 
+
+    const discountNum = document.createElement("h1");
+    discountNum.textContent = `${Math.trunc(((first_product * 49999 + second_product * 56999 + third_product * 66999) * 0.19)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн`;
+    discountNum.classList.add("h1_4");
+    document.body.appendChild(discountNum); 
+
+    let discountVar = Math.trunc(((first_product * 49999 + second_product * 56999 + third_product * 66999) * 0.19))
+
+    const FinalPrice = document.createElement("h1");
+    FinalPrice.textContent = `Загальна сума`;
+    FinalPrice.classList.add("h1_5");
+    document.body.appendChild(FinalPrice); 
+
+    const FinalPriceNum = document.createElement("h1");
+    FinalPriceNum.textContent = `${((first_product * 49999 + second_product * 56999 + third_product * 66999) - discountVar).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн`;
+    FinalPriceNum.classList.add("h1_6");
+    document.body.appendChild(FinalPriceNum); 
+
+
+    const countElement = document.createElement("p");
+    countElement.textContent = `${document.cookie.split("=")[1].split(" ").length}`
+    countElement.classList.add("count");
+    document.body.appendChild(countElement); 
+
+    
+
+    </script>
+
+
+{% endblock %}
