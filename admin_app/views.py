@@ -6,8 +6,14 @@ import pandas
 from .models import Product
 from project.settings import DATABASE
 
+
+
 def render_admin():
     global product
+
+    
+
+
 
     if len(list(Product.query.all())) == 0:
 
@@ -25,15 +31,46 @@ def render_admin():
             DATABASE.session.add(product)
         DATABASE.session.commit()
 
+
+    
+
+    if flask.request.method == "POST":
+        btn = flask.request.form.get("rewrite")
+
+        flask.session['flag'] = btn
+        
+
+
+
+
+        print(btn)
+        return flask.redirect("/admin/redact/")
+
+
     print(Product.query.all())
 
     name = flask.session.get('log')
 
-    if flask.request.method == "POST":
-        return flask.redirect("/admin/redact")
+    # if flask.request.method == "POST":
+    #     return flask.redirect("/admin/redact/")
+
+    
+    users = User.query.filter_by(is_admin = True).all()
+    
+    nicknames = []
 
 
 
-    print(DATABASE.session)
+    for user in users:
+        nicknames.append(str(user).split(":")[1])
+        
 
-    return flask.render_template(template_name_or_list= "admin.html", log = name, products = Product.query.all())
+    for nickname in nicknames:
+        print(nickname)
+        print(name)
+
+        if nickname == " " + name:
+            return flask.render_template(template_name_or_list= "admin.html", log = name, products = Product.query.all())
+        else:
+            return flask.redirect("/shop/") 
+

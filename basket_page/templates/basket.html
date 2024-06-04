@@ -13,6 +13,7 @@
     <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
     <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
     <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
+    <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
 
     <button class="button1-" onclick="javascript:minus1Button()">-</button>
     <button class="button2-" onclick="javascript:minus2Button()">-</button>
@@ -20,11 +21,11 @@
 
     <button class="button1" onclick="javascript:plus1Button()">+</button>
     <button class="button2" onclick="javascript:plus2Button()">+</button>
-    <button class="button3" onclick="javascript:plus3Button()">+</button>\
+    <button class="button3" onclick="javascript:plus3Button()">+</button>
 
     {% for product in products %}
 
-        <img src="{{ url_for('basket.static', filename= 'static/images/' + product.image) }}" alt="basket" class="img{{product.id}}">
+        <img src="{{ url_for('shop.static', filename= 'static/images/' + product.image) }}" alt="basket" class="img{{product.id}}">
     <!-- <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img2">
     <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img3"> -->
 

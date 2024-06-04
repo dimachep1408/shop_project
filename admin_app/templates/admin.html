@@ -10,16 +10,16 @@
 
     <h2>{{log}}</h2>
     <a class = "a1" href="http://127.0.0.1:5000/main2/">HOME</a>
-    <a class="a2" href="http://127.0.0.1:5000/admin/">SHOP</a>
+    <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
     <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
     <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
-
+    <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
 
 
     {% for product in products %}
 
         
-        <img class = "img{{ product.count }}" src="{{ url_for('admin.static', filename= 'static/images/' + product.image) }}" alt="admin">
+        <img class = "img{{ product.count }}" src="{{ url_for('shop.static', filename= 'static/images/' + product.image) }}" alt="shop">
         <div class="div{{ product.count }}">
             <p class = "p{{ product.count }}_1">{{ product.name }}</p>
             <p class = "p{{ product.count }}_2"><del>{{ product.price }} грн</del></p>
@@ -36,7 +36,7 @@
             <p class = "p{{ product.count }}_8">ТОВАР В НАЯВНОСТІ</p>
         </div>
 <!-- 
-        <img class = "img2" src="{{ url_for('admin.static', filename= 'static/images/image.png') }}" alt="admin">
+        <img class = "img2" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
         <div class="div2">
             <p class = "p2_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
             <p class = "p2_2"><del>56 999 грн</del></p>
@@ -53,7 +53,7 @@
             <p class = "p2_8">ТОВАР В НАЯВНОСТІ</p>
         </div>
 
-        <img class = "img3" src="{{ url_for('admin.static', filename= 'static/images/image.png') }}" alt="admin">
+        <img class = "img3" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
         <div class = "div3">
             <p class = "p3_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
             <p class = "p3_2"><del>66 999 грн</del></p>
@@ -76,11 +76,11 @@
 
     
 
-    <img class = "img4" src="{{ url_for('admin.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+    <img class = "img4" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
 
-    <img class = "img5" src="{{ url_for('admin.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+    <img class = "img5" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
 
-    <img class = "img6" src="{{ url_for('admin.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
+    <img class = "img6" src="{{ url_for('shop.static', filename= 'static/images/image2.png') }}" alt="in_the_open1">
 
     <p class = "count" id = "count"></p>
 
@@ -89,27 +89,24 @@
 
     <form method="POST">
         
-        <button type = "submit" class = "btns" name = "rewrite1" ><img class = "rewrite1" id = "rewrite_btn" alt="in_the_open1" name = "rewrite1" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite2" ><img class = "rewrite2" id = "rewrite_btn" alt="in_the_open1" name = "rewrite2" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite3" id = "rewrite_btn" alt="in_the_open1" name = "rewrite3" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button> 
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite4" id = "rewrite_btn" alt="in_the_open1" name = "rewrite4" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite5" id = "rewrite_btn" alt="in_the_open1" name = "rewrite5" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite6" id = "rewrite_btn" alt="in_the_open1" name = "rewrite6" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite7" id = "rewrite_btn" alt="in_the_open1" name = "rewrite7" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite8" id = "rewrite_btn" alt="in_the_open1" name = "rewrite8" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" ><img class = "rewrite9" id = "rewrite_btn" alt="in_the_open1" name = "rewrite9" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite10" id = "rewrite_btn" alt="in_the_open1" name = "rewrite10" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite11" id = "rewrite_btn" alt="in_the_open1" name = "rewrite11" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite12" id = "rewrite_btn" alt="in_the_open1" name = "rewrite12" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite13" id = "rewrite_btn" alt="in_the_open1" name = "rewrite13" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite14" id = "rewrite_btn" alt="in_the_open1" name = "rewrite14" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite15" id = "rewrite_btn" alt="in_the_open1" name = "rewrite15" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite16" id = "rewrite_btn" alt="in_the_open1" name = "rewrite16" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite17" id = "rewrite_btn" alt="in_the_open1" name = "rewrite17" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite18" id = "rewrite_btn" alt="in_the_open1" name = "rewrite18" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite19" id = "rewrite_btn" alt="in_the_open1" name = "rewrite19" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite20" id = "rewrite_btn" alt="in_the_open1" name = "rewrite20" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite21" id = "rewrite_btn" alt="in_the_open1" name = "rewrite21" src="{{ url_for('admin.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite1" ><img class = "rewrite1" id = "rewrite_btn" alt="in_the_open1" name = "rewrite1" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite2" ><img class = "rewrite2" id = "rewrite_btn" alt="in_the_open1" name = "rewrite2" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite3" ><img class = "rewrite3" id = "rewrite_btn" alt="in_the_open1" name = "rewrite3" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button> 
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite4" ><img class = "rewrite4" id = "rewrite_btn" alt="in_the_open1" name = "rewrite4" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite5" ><img class = "rewrite5" id = "rewrite_btn" alt="in_the_open1" name = "rewrite5" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite6" ><img class = "rewrite6" id = "rewrite_btn" alt="in_the_open1" name = "rewrite6" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite7" ><img class = "rewrite7" id = "rewrite_btn" alt="in_the_open1" name = "rewrite7" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite9" ><img class = "rewrite9" id = "rewrite_btn" alt="in_the_open1" name = "rewrite9" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite10"><img class = "rewrite10" id = "rewrite_btn" alt="in_the_open1" name = "rewrite10" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite11"><img class = "rewrite11" id = "rewrite_btn" alt="in_the_open1" name = "rewrite11" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite12"><img class = "rewrite12" id = "rewrite_btn" alt="in_the_open1" name = "rewrite12" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite13"><img class = "rewrite13" id = "rewrite_btn" alt="in_the_open1" name = "rewrite13" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite14"><img class = "rewrite14" id = "rewrite_btn" alt="in_the_open1" name = "rewrite14" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite15"><img class = "rewrite15" id = "rewrite_btn" alt="in_the_open1" name = "rewrite15" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite16"><img class = "rewrite16" id = "rewrite_btn" alt="in_the_open1" name = "rewrite16" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite17"><img class = "rewrite17" id = "rewrite_btn" alt="in_the_open1" name = "rewrite17" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite18"><img class = "rewrite18" id = "rewrite_btn" alt="in_the_open1" name = "rewrite18" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
+        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite21"><img class = "rewrite21" id = "rewrite_btn" alt="in_the_open1" name = "rewrite21" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
 
     </form>
     <script>

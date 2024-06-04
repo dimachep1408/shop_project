@@ -9,14 +9,15 @@ img{
     margin-top: 50;
 }
 
+
 .a5{
     position: absolute;
     top: 5;
     left: 750;
     color: #000000;
-    text-decoration: none;
     font-size: 24;
     font-family: sans-serif;
+    font-weight: 700;
 }
 
 .p1_1{
@@ -635,7 +636,7 @@ img{
     color: #000000;
     font-size: 24;
     font-family: sans-serif;
-    font-weight: 700;
+    text-decoration: none;
 }
 
 .a3{
@@ -826,3 +827,69 @@ h2{
     top: 0;
     left: -5;
 } 
+
+
+#BorderModal{
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 700;
+    height: 350;
+    z-index: 999;
+    background-color: white;
+    left: 600;
+    top: 250;
+}
+
+#InputModal{
+    position: absolute;
+    width: 450;
+    height: 74;
+    border-radius: 15px;
+    border: 2px solid black;
+    left: 730;
+    top: 400;
+    z-index: 1000;
+}
+
+
+#TextModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    left: 730;
+    top: 330;
+    z-index: 1000;
+}
+
+
+#ButtonModal{
+    position: absolute;
+    width: 400;
+    height: 50;
+    font-family: sans-serif;
+    font-size: 25;
+    z-index: 1000;
+    left: 750;
+    top: 500;
+    text-decoration: underline;
+    border: none;
+    background-color: white;
+
+}
+
+
+#File{
+    position: absolute;
+    left: 850;
+    top: 430;
+    z-index: 1000;
+}
+
+body *:not(#Form):not(#BorderModal):not(#InputModal):not(#TextModal):not(#ButtonModal):not(#File){
+    filter: blur(2px);
+    pointer-events: none;
+}

@@ -26,10 +26,25 @@ def render_shop():
         DATABASE.session.commit()
 
 
+    name =f" {flask.session.get('log')}"
 
-    print(Product.query.get(3))
 
-    name = flask.session.get('log')
+    # users = User.query.filter_by(is_admin = True).all()
+    
+    # nicknames = []
+
+    # print(users)
+
+    # for user in users:
+    #     nicknames.append(str(user).split(":")[1])
+
+    # for nickname in nicknames:
+    #     if nickname == name:
+    #         return flask.redirect("/admin/")
+
+
+
+
 
 
 
