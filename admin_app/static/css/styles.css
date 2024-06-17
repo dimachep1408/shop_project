@@ -6,7 +6,7 @@ img{
 .img1{
     position: absolute;
     margin-left: 500;
-    margin-top: 50;
+    margin-top: 135;
 }
 
 
@@ -25,7 +25,7 @@ img{
 }
 
 
-.p1_2{
+.p1_2{          
     width: 170;
     height: 34;
     font-family: sans-serif;
@@ -169,7 +169,7 @@ img{
 .img2{
     position: absolute;
     margin-left: 500;
-    margin-top: 330;
+    margin-top: 465;
 }
 
 
@@ -178,8 +178,8 @@ img{
     position: absolute;
     width: 38;
     height: 36;
-    margin-top: 265;
-    margin-left: 1390
+    top: 265;
+    left: 875
     
 }
 
@@ -188,8 +188,8 @@ img{
     position: absolute;
     width: 38;
     height: 36;
-    margin-top: 500;
-    margin-left: 1390
+    top: 500;
+    left: 875
 }
 
 .p2_1{
@@ -355,7 +355,7 @@ img{
 .img3{
     position: absolute;
     margin-left: 500;
-    margin-top: 605;
+    margin-top: 790;
 }
 
 .p3_1{
@@ -552,8 +552,8 @@ img{
     position: absolute;
     width: 38;
     height: 36;
-    margin-top: 785;
-    margin-left: 1390
+    top: 785;
+    left: 875
 }
 
 .count{
@@ -663,18 +663,21 @@ h2{
     width: 1200px;
     position: absolute;
     left: 500px;
+    top: 100;
 }
 
 .div2{
     width: 1200px;
     position: absolute;
     left: 500px;
+    top: 150;
 }
 
 .div3{
     width: 1200px;
     position: absolute;
     left: 500px;
+    top: 200;
 }
 
 .a4{
@@ -698,134 +701,147 @@ h2{
     border: 2px solid black;
 }
 
-.rewrite1{
+
+
+
+
+.rewrite1-1{
     position: absolute;
-    top: 175;
-    left: 710;
+    top: 40 ;
+    left: 1000;
 }
 
-.rewrite2{
-    position: absolute;
-    top: 450;
-    left: 710;
-}
-
-.rewrite3{
-    position: absolute;
-    top: 725;
-    left: 710;
-}
-
-.rewrite4{
-    position: absolute;
-    top: 45 ;
-    left: 1475;
-}
-
-.rewrite5{
-    position: absolute;
-    top: 345 ;
-    left: 1475;
-}
-
-.rewrite6{
-    position: absolute;
-    top: 620;
-    left: 1435;
-}
-
-.rewrite7{
+.rewrite2-1{
     position: absolute;
     top: 73;
-    left: 950;
+    left: 550;
 }
 
-.rewrite8{
+.rewrite3-1{
     position: absolute;
-    top: 110;
-    left: 950;
+    top: 150;
+    left: 215;
 }
 
-.rewrite9{
+.rewrite4-1{
     position: absolute;
-    top: 280;
-    left: 895;
+    top: 270;
+    left: 395;
 }
 
-.rewrite10{
+.rewrite5-1{
     position: absolute;
-    top: 280;
-    left: 1035;
+    top: 270;
+    left: 535;
 }
 
-.rewrite11{
+.rewrite6-1{
     position: absolute;
-    top: 280;
-    left: 1175;
+    top: 270;
+    left: 695;
 }
 
-.rewrite12{
+
+
+
+
+.rewrite1-2{
     position: absolute;
-    top: 555;
-    left: 895;
+    top: 340 ;
+    left: 1000;
 }
 
-.rewrite13{
+.rewrite2-2{
     position: absolute;
-    top: 555;
-    left: 1035;
+    top: 363;
+    left: 550;
 }
 
-.rewrite14{
+.rewrite3-2{
     position: absolute;
-    top: 555;
-    left: 1175;
+    top: 450;
+    left: 215;
 }
 
-.rewrite15{
+.rewrite4-2{
     position: absolute;
-    top: 830;
-    left: 1175;
+    top: 550;
+    left: 395;
 }
 
-.rewrite16{
+.rewrite5-2{
     position: absolute;
-    top: 830;
-    left: 895;
+    top: 550;
+    left: 535;
 }
 
-.rewrite17{
+.rewrite6-2{
     position: absolute;
-    top: 830;
-    left: 1035;
+    top: 550;
+    left: 695;
 }
 
-.rewrite18{
+
+
+
+.rewrite1-3{
     position: absolute;
-    top: 370;
-    left: 950;
+    top: 600 ;
+    left: 1000;
 }
 
-.rewrite19{
+.rewrite2-3{
     position: absolute;
-    top: 400;
-    left: 950;
+    top: 633;
+    left: 550;
 }
 
-.rewrite20{
+.rewrite3-3{
     position: absolute;
-    top: 673;
-    left: 950;
+    top: 700;
+    left: 215;
 }
 
-.rewrite21{
+.rewrite4-3{
     position: absolute;
-    top: 643;
-    left: 950;
+    top: 820;
+    left: 395;
 }
+
+.rewrite5-3{
+    position: absolute;
+    top: 820;
+    left: 535;
+}
+
+.rewrite6-3{
+    position: absolute;
+    top: 820;
+    left: 695
+}
+
+
+
 
 .btns{
     position: absolute;
     top: 0;
     left: -5;
+    width: 1;
+    height: 1;
 } 
+
+
+.add_img{
+    width: 25;
+    height: 25;
+}
+
+.add{
+    position: absolute;
+    font-size: 25;
+    border: none;
+    background-color: white;
+    left: 1300;
+    top: 50;
+}

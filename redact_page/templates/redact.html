@@ -16,15 +16,15 @@
     <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
 
 
-    {% if flag == "rewrite1" or flag == "rewrite2" or flag == "rewrite3" %}
+    {% if flag == "rewrite3-1" or flag == "rewrite3-2" or flag == "rewrite3-3" %}
         <form method="POST" enctype="multipart/form-data" id="Form">
-            {% if flag == "rewrite1" %}
+            {% if flag == "rewrite3-1" %}
                 <input type="file" accept="image/*" id="File" name="fileInput1">
             {% endif %}
-            {% if flag == "rewrite2" %}
+            {% if flag == "rewrite3-2" %}
                 <input type="file" accept="image/*" id="File" name="fileInput2">
             {% endif %}
-            {% if flag == "rewrite3" %}
+            {% if flag == "rewrite3-3" %}
                 <input type="file" accept="image/*" id="File" name="fileInput3">
             {% endif %}
             <p id="BorderModal"> </p>

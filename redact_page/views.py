@@ -68,45 +68,43 @@ def render_redact():
 
 
 
-            if flag == "rewrite4":
+            if flag == "rewrite1-1":
                 product2 = Product.query.get_or_404(1)
                 product2.name = text
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite5":
+            if flag == "rewrite2-1":
+                product2 = Product.query.get_or_404(1)  
+                product2.price = text
+                product2.final_price = int(text) - int(text) * 0.19
+                DATABASE.session.commit()
+
+
+            if flag == "rewrite1-2":
                 product2 = Product.query.get_or_404(2)
                 product2.name = text
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite6":
+            if flag == "rewrite2-2":
+                product2 = Product.query.get_or_404(2)  
+                product2.price = text
+                product2.final_price = int(text) - int(text) * 0.19
+                DATABASE.session.commit()
+
+
+            if flag == "rewrite1-3":
                 product2 = Product.query.get_or_404(3)
                 product2.name = text
                 DATABASE.session.commit()
 
 
-            
-            if flag == "rewrite7":
-                product2 = Product.query.get_or_404(1)
+            if flag == "rewrite2-3":
+                product2 = Product.query.get_or_404(3)  
                 product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()    
-
-            if flag == "rewrite18":
-                product2 = Product.query.get_or_404(2)
-                product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()   
-
-            if flag == "rewrite21":
-                product2 = Product.query.get_or_404(3)
-                product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()   
-
-
-        # Сохраняем файл
+                product2.final_price = int(text) - int(text) * 0.19
+                DATABASE.session.commit()
 
 
         return flask.redirect("/admin/")

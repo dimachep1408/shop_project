@@ -18,7 +18,7 @@ main_page2.main2.add_url_rule(rule = "/main2/", view_func = main_page2.render_ma
 registration_page2.registration2.add_url_rule(rule= "/registration2/", view_func= registration_page2.render_registration2, methods = ["GET", "POST"])
 shop_page.shop.add_url_rule(rule= "/shop/", view_func = shop_page.render_shop, methods = ["GET", "POST"])
 basket_page.basket.add_url_rule(rule= "/basket/", view_func = basket_page.render_basket, methods = ["GET", "POST"])
-admin_app.admin.add_url_rule(rule="/admin/", view_func= admin_app.render_admin, methods = ["GET", "POST"])
+admin_app.admin.add_url_rule(rule= "/admin/", view_func= admin_app.render_admin, methods = ["GET", "POST"])
 redact_page.redact.add_url_rule(rule = "/admin/redact/", view_func = redact_page.render_redact, methods = ["GET", "POST"])
 
 shop.register_blueprint(blueprint = main_page2.main2)
