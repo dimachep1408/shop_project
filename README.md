@@ -1,2 +1,3 @@
 ﻿# shop_project
-[label](https://www.google.com/imgres?q%3Dgif%26imgurl%3Dhttps%3A%2F%2Fi.pinimg.com%2Foriginals%2F57%2F61%2F5b%2F57615b8c0092a66c1d4058b1692955cc.gif%26imgrefurl%3Dhttps%3A%2F%2Fwww.pinterest.com%2Fpin%2F116530709096071044%2F%26docid%3DcwRdloL9X5by-M%26tbnid%3D6wAj2BhG1MUFWM%26vet%3D12ahUKEwjzhajY6_SGAxXILRAIHZ4BCxgQM3oECHEQAA..i%26w%3D383%26h%3D480%26hcb%3D2%26ved%3D2ahUKEwjzhajY6_SGAxXILRAIHZ4BCxgQM3oECHEQAA)
+
+![Rotating_earth_(large)](https://github.com/dimachep1408/shop_project/assets/150166590/29a1b184-50eb-4bb9-ab10-4183e2f450ba)
