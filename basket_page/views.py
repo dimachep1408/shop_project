@@ -9,5 +9,8 @@ def render_basket():
 
     name = flask.session.get('log')
     print(name)
+    
+    if flask.request.method == "POST":
+        return flask.redirect("/basket/order")
 
     return flask.render_template(template_name_or_list= "basket.html", log = name, products = Product.query.all())

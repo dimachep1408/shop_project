@@ -8,22 +8,7 @@ from project.settings import DATABASE
 
 def render_shop():
     global product
-
-    if len(list(Product.query.all())) == 0:
-
-        excel_path = os.path.abspath(__file__ + '/../static/Product.xlsx')
-        data_excel = pandas.read_excel(io = excel_path, header = None, names = ["name", "price", "image", "count", "final_price"])
-        for row in data_excel.iterrows():
-            row_data = row[1]
-            product = Product(
-                name = row_data['name'],
-                price = row_data['price'],
-                image = row_data['image'],
-                count = row_data['count'],
-                final_price = row_data["final_price"]
-            )
-            DATABASE.session.add(product)
-        DATABASE.session.commit()
+    
 
 
     name =f" {flask.session.get('log')}"

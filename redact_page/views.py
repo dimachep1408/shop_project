@@ -68,45 +68,21 @@ def render_redact():
 
 
 
-            if flag == "rewrite4":
+            if flag == "rewrite1-1":
                 product2 = Product.query.get_or_404(1)
                 product2.name = text
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite5":
-                product2 = Product.query.get_or_404(2)
-                product2.name = text
+            if flag == "rewrite2-1":
+                product2 = Product.query.get_or_404(1)  
+                product2.price = text
+                product2.final_price = int(text) - int(text) * 0.19
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite6":
-                product2 = Product.query.get_or_404(3)
-                product2.name = text
-                DATABASE.session.commit()
 
 
-            
-            if flag == "rewrite7":
-                product2 = Product.query.get_or_404(1)
-                product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()    
-
-            if flag == "rewrite18":
-                product2 = Product.query.get_or_404(2)
-                product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()   
-
-            if flag == "rewrite21":
-                product2 = Product.query.get_or_404(3)
-                product2.price = text
-                product2.final_price = int(text) * 0.19
-                DATABASE.session.commit()   
-
-
-        # Сохраняем файл
 
 
         return flask.redirect("/admin/")
