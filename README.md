@@ -54,14 +54,12 @@
    ```bash
    git clone https://github.com/yourusername/shop_project.git
 Перейдіть до директорії проекту:
-bash
-Копировать код
-cd shop_project
+   ```bash
+   cd shop_project
 Створіть віртуальне середовище та активуйте його:
-bash
-Копировать код
-python -m venv venv
-source venv/bin/activate  # Для Windows використовуйте `venv\Scripts\activate`
+   ```bash
+    python -m venv venv
+source venv/bin/activate
 Встановіть залежності:
 bash
 Копировать код
