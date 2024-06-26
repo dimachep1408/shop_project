@@ -16,14 +16,22 @@
     <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
 
 
+
+    {% if flag == "rewrite3-1" or flag == "rewrite3-2" or flag == "rewrite3-3" %}
         <form method="POST" enctype="multipart/form-data" id="Form">
-
+            {% if flag == "rewrite3-1" %}
                 <input type="file" accept="image/*" id="File" name="fileInput1">
-
+            {% endif %}
+            {% if flag == "rewrite3-2" %}
                 <input type="file" accept="image/*" id="File" name="fileInput2">
+            {% endif %}
+            {% if flag == "rewrite3-3" %}
+                <input type="file" accept="image/*" id="File" name="fileInput3">
+            {% endif %}
             <p id="BorderModal"> </p>
             <button id="ButtonModal">SEND</button>
         </form>
+    {% endif %}
 
         <form method="POST" id="Form">
             <p id="BorderModal"> </p>
@@ -38,23 +46,22 @@
     {% for product in products %}
 
         
-        <img class = "img{{ product.count }}" src="{{ url_for('redact.static', filename= 'static/images/' + product.image) }}" alt="redact">
-        <div class="div{{ product.count }}">
-            <p class = "p{{ product.count }}_1">{{ product.name }}</p>
-            <p class = "p{{ product.count }}_2"><del>{{ product.price }} грн</del></p>
-            <p class = "disc_{{ product.count }}">Знижка 19%</p>
-            <p class = "final_price_{{ product.count }}">{{ product.final_price }} грн</p>
-            <button class = "button{{ product.count }}_3"  onclick="javascript:indicator(); javascript:buy_{{ product.count }}();javascript:counter()">КУПИТИ</button>
-            <p class = "p{{ product.count }}_4">Ємність:</p>
-            <p class = "p{{ product.count }}_5"></p>
-            <p class="p{{ product.count }}_5_1">256 Гб</p>
-            <p class = "p{{ product.count }}_6"></p>
-            <p class="p{{ product.count }}_6_1">512 Гб</p>
-            <p class = "p{{ product.count }}_7"></p>
-            <p class="p{{ product.count }}_7_1">1 Тб</p>
-            <p class = "p{{ product.count }}_8">ТОВАР В НАЯВНОСТІ</p>
+        <img class = "img{{ product.id }}" src="{{ url_for('shop.static', filename= 'static/images/' + product.image) }}" alt="shop">
+        <div class="div{{ product.id }}">
+            <p class = "p{{ product.id }}_1">{{ product.name }}</p>
+            <p class = "p{{ product.id }}_2"><del>{{ product.price }} грн</del></p>
+            <p class = "disc_{{ product.id }}">Знижка 19%</p>
+            <p class = "final_price_{{ product.id }}">{{ product.final_price }} грн</p>
+            <button class = "button{{ product.id }}_3"  onclick="javascript:indicator(); javascript:buy_product.id();javascript:counter()">КУПИТИ</button>
+            <p class = "p{{ product.id }}_4">Ємність:</p>
+            <p class = "p{{ product.id }}_5"></p>
+            <p class="p{{ product.id }}_5_1">256 Гб</p>
+            <p class = "p{{ product.id }}_6"></p>
+            <p class="p{{ product.id }}_6_1">512 Гб</p>
+            <p class = "p{{ product.id }}_7"></p>
+            <p class="p{{ product.id }}_7_1">1 Тб</p>
         </div>
-<!-- 
+    <!-- 
         <img class = "img2" src="{{ url_for('redact.static', filename= 'static/images/image.png') }}" alt="redact">
         <div class="div2">
             <p class = "p2_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
