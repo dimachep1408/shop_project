@@ -31,7 +31,8 @@
             <p id="BorderModal"> </p>
             <button id="ButtonModal">SEND</button>
         </form>
-    {% endif %}
+
+    {% else %}
 
         <form method="POST" id="Form">
             <p id="BorderModal"> </p>
@@ -39,7 +40,7 @@
             <input id="InputModal" name="InputModal">
             <button id="ButtonModal">SEND</button>
         </form>
-
+    {% endif %}
     <p>{{ flag }}</p>
 
 

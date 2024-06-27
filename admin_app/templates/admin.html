@@ -9,16 +9,18 @@
 {% block content %}
 
     <h2>{{log}}</h2>
-    <a class = "a1" href="http://127.0.0.1:5000/main2/">HOME</a>
-    <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
-    <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
-    <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
-    <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
+    <a class = "a1" href="/main2/">HOME</a>
+    <a class="a2" href="/shop/">SHOP</a>
+    <a class="a3" href="/basket/">CART</a>
+    <a class="a4" href="/contacts/">CONTACTS</a>
+    <a class="a5" href="/admin/">ADMIN</a>
 
     <form method="post">
         <button class = "add_btn" name="add_btn">ДОДАТИ ПРОДУКТ</button>
         <img src="{{ url_for('admin.static', filename = '/static/images/add.png')}}" alt = "admin" class = "add_img">
     </form>
+
+
 
     {% for product in products %}
 

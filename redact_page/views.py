@@ -74,11 +74,7 @@ def render_redact():
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite2-1":
-                product2 = Product.query.get_or_404(1)  
-                product2.price = text
-                product2.final_price = int(text) - int(text) * 0.19
-                DATABASE.session.commit()
+
 
 
             if flag == "rewrite1-2":
@@ -87,6 +83,12 @@ def render_redact():
                 DATABASE.session.commit()
 
 
+            if flag == "rewrite2-1":
+                product2 = Product.query.get_or_404(1)  
+                product2.price = text
+                product2.final_price = int(text) - int(text) * 0.19
+                DATABASE.session.commit()
+
             if flag == "rewrite2-2":
                 product2 = Product.query.get_or_404(2)  
                 product2.price = text
@@ -94,17 +96,7 @@ def render_redact():
                 DATABASE.session.commit()
 
 
-            if flag == "rewrite1-3":
-                product2 = Product.query.get_or_404(3)
-                product2.name = text
-                DATABASE.session.commit()
 
-
-            if flag == "rewrite2-3":
-                product2 = Product.query.get_or_404(3)  
-                product2.price = text
-                product2.final_price = int(text) - int(text) * 0.19
-                DATABASE.session.commit()
 
 
 

@@ -7,6 +7,7 @@ img{
     position: absolute;
     margin-left: 500;
     margin-top: 125;
+    margin-top: 135;
 }
 
 
@@ -25,7 +26,7 @@ img{
 }
 
 
-.p1_2{
+.p1_2{          
     width: 170;
     height: 34;
     font-family: sans-serif;
@@ -170,6 +171,7 @@ img{
     position: absolute;
     margin-left: 500;
     margin-top: 475;
+    margin-top: 465;
 }
 
 
@@ -356,6 +358,7 @@ img{
     position: absolute;
     margin-left: 500;
     margin-top: 800;
+    margin-top: 790;
 }
 
 .p3_1{
@@ -703,6 +706,7 @@ h2{
 
 
 
+
 .rewrite1-1{
     position: absolute;
     top: 40 ;
@@ -750,7 +754,7 @@ h2{
 
 .rewrite2-2{
     position: absolute;
-    top: 365;
+    top: 363;
     left: 550;
 }
 
@@ -768,38 +772,41 @@ h2{
 
 .rewrite5-2{
     position: absolute;
+
     top: 545;
+
+    top: 550;
+
     left: 535;
 }
 
 .rewrite6-2{
     position: absolute;
     top: 545;
+
+    top: 550;
+
     left: 695;
 }
 
 
 
 
-
-
-
-
 .rewrite1-3{
     position: absolute;
-    top: 610 ;
+    top: 600 ;
     left: 1000;
 }
 
 .rewrite2-3{
     position: absolute;
-    top: 640;
+    top: 633;
     left: 550;
 }
 
 .rewrite3-3{
     position: absolute;
-    top: 715;
+    top: 700;
     left: 215;
 }
 
@@ -818,7 +825,7 @@ h2{
 .rewrite6-3{
     position: absolute;
     top: 820;
-    left: 695;
+    left: 695
 }
 
 

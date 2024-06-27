@@ -30,6 +30,11 @@ button_show_products = telebot.types.InlineKeyboardButton(text= "Get products", 
 button_add_product = telebot.types.InlineKeyboardButton(text= "Add product", callback_data= "button_add_product")
 keyboard1 = telebot.types.InlineKeyboardMarkup(keyboard=[[button_show_users], [button_show_products], [button_add_product]])
 
+list_users = get_users()
+
+button_show_users = telebot.types.InlineKeyboardButton(text="Show users", callback_data="button1")
+keyboard1 = telebot.types.InlineKeyboardMarkup(keyboard=[[button_show_users]])
+
 button_add_admin = telebot.types.InlineKeyboardButton(text="Add admin", callback_data="button2")
 button_demote_admin = telebot.types.InlineKeyboardButton(text="Demote admin", callback_data="button3")
 keyboard2_1 = telebot.types.InlineKeyboardMarkup(keyboard=[[button_add_admin]])
@@ -61,6 +66,7 @@ def start(message: telebot.types.Message):
     bot.send_message(chat_id= message.chat.id, text= "Now Send Image")
 
     
+
 
 @bot.callback_query_handler(func=lambda call: call.data == "button1")
 def show_users(callback: telebot.types.CallbackQuery):
@@ -98,10 +104,14 @@ def add_products(callback: telebot.types.CallbackQuery):
     final_price = int(price) - int(price) * 0.19
 
 
+
 @bot.callback_query_handler(func=lambda call: call.data in ["button2", "button3"])
 def modify_user(callback: telebot.types.CallbackQuery):
     name = callback.message.text.split("-")[0]
     cursor.execute("SELECT id, is_admin FROM user WHERE login = ?", (name))
+
+    cursor.execute("SELECT id, is_admin FROM user WHERE login = ?", (name,))
+
     user = cursor.fetchone()
     if user:
         user_id, is_admin = user
