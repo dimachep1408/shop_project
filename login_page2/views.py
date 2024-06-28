@@ -3,10 +3,7 @@ import flask_login
 from registration_page.models import User
 from project.settings import DATABASE
 
-def render_login2():
-    # if flask_login.current_user.is_authenticated:
-    #     return "Ви вже авторизовані"
-    # else:    
+def render_login2(): 
     if flask.request.method == 'POST':
         for user in User.query.filter_by(login = flask.request.form["name_or_email"]):
             if user.password == flask.request.form["password"]:

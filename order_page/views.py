@@ -17,11 +17,12 @@ def render_order():
 
 
     if flask.request.method == "POST":
+        
         message = Message(
             "Message Order",
             sender = ADMINISTRATOR_ADDRESS,
             recipients= ["dmitriychep2011@gmail.com"],
-            body = "It's TEEEEEST"
+            body = "Your order was send"
         )
 
         mail.send(message)

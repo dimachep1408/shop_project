@@ -31,7 +31,7 @@
             <p class = "p{{ product.id }}_2"><del>{{ product.price }} грн</del></p>
             <p class = "disc_{{ product.id }}">Знижка 19%</p>
             <p class = "final_price_{{ product.id }}">{{ product.final_price }} грн</p>
-            <button class = "button{{ product.id }}_3"  onclick="javascript:indicator(); javascript:buy_{{ product.id }}();javascript:counter()">КУПИТИ</button>
+            <button class = "button{{ product.id }}_3">КУПИТИ</button>
             <p class = "p{{ product.id }}_4">Ємність:</p>
             <p class = "p{{ product.id }}_5"></p>
             <p class="p{{ product.id }}_5_1">256 Гб</p>
@@ -53,59 +53,6 @@
             </form>
         </div>
 
-        <!-- <button type = "submit" class = "btns" name = "rewrite" value= "rewrite1" ><img class = "rewrite1" id = "rewrite_btn" alt="in_the_open1" name = "rewrite1" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite2" ><img class = "rewrite2" id = "rewrite_btn" alt="in_the_open1" name = "rewrite2" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite3" ><img class = "rewrite3" id = "rewrite_btn" alt="in_the_open1" name = "rewrite3" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button> 
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite4" ><img class = "rewrite4" id = "rewrite_btn" alt="in_the_open1" name = "rewrite4" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite5" ><img class = "rewrite5" id = "rewrite_btn" alt="in_the_open1" name = "rewrite5" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite6" ><img class = "rewrite6" id = "rewrite_btn" alt="in_the_open1" name = "rewrite6" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite7" ><img class = "rewrite7" id = "rewrite_btn" alt="in_the_open1" name = "rewrite7" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite9" ><img class = "rewrite9" id = "rewrite_btn" alt="in_the_open1" name = "rewrite9" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite10"><img class = "rewrite10" id = "rewrite_btn" alt="in_the_open1" name = "rewrite10" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite11"><img class = "rewrite11" id = "rewrite_btn" alt="in_the_open1" name = "rewrite11" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite12"><img class = "rewrite12" id = "rewrite_btn" alt="in_the_open1" name = "rewrite12" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite13"><img class = "rewrite13" id = "rewrite_btn" alt="in_the_open1" name = "rewrite13" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite14"><img class = "rewrite14" id = "rewrite_btn" alt="in_the_open1" name = "rewrite14" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite15"><img class = "rewrite15" id = "rewrite_btn" alt="in_the_open1" name = "rewrite15" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite16"><img class = "rewrite16" id = "rewrite_btn" alt="in_the_open1" name = "rewrite16" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite17"><img class = "rewrite17" id = "rewrite_btn" alt="in_the_open1" name = "rewrite17" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite18"><img class = "rewrite18" id = "rewrite_btn" alt="in_the_open1" name = "rewrite18" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button>
-        <button type = "submit" class = "btns" name = "rewrite" value= "rewrite21"><img class = "rewrite21" id = "rewrite_btn" alt="in_the_open1" name = "rewrite21" src="{{ url_for('shop.static', filename= 'static/images/image3.png') }}"></button> -->
-
-<!-- 
-        <img class = "img2" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
-        <div class="div2">
-            <p class = "p2_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
-            <p class = "p2_2"><del>56 999 грн</del></p>
-            <p class = "disc_2">Знижка 19%</p>
-            <p class = "final_price_2">10 830 грн</p>
-            <button class = "button2_3"  onclick="javascript:indicator(); javascript:buy_2();javascript:counter()">КУПИТИ</button>
-            <p class = "p2_4">Ємність:</p>
-            <p class = "p2_5"></p>
-            <p class="p2_5_1">256 Гб</p>
-            <p class = "p2_6"></p>
-            <p class="p2_6_1">512 Гб</p>
-            <p class = "p2_7"></p>
-            <p class="p2_7_1">1 Тб</p>
-            <p class = "p2_8">ТОВАР В НАЯВНОСТІ</p>
-        </div>
-
-        <img class = "img3" src="{{ url_for('shop.static', filename= 'static/images/image.png') }}" alt="shop">
-        <div class = "div3">
-            <p class = "p3_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
-            <p class = "p3_2"><del>66 999 грн</del></p>
-            <p class = "disc_3">Знижка 19%</p>
-            <p class = "final_price_3">12 730 грн</p>
-            <button class = "button3_3" onclick="javascript:indicator(); javascript:buy_3();javascript:counter()">КУПИТИ</button>
-            <p class = "p3_4">Ємність:</p>
-            <p class = "p3_5"></p>
-            <p class="p3_5_1">256 Гб</p>
-            <p class = "p3_6"></p>
-            <p class="p3_6_1">512 Гб</p>
-            <p class = "p3_7"></p>
-            <p class="p3_7_1">1 Тб</p>
-            <p class = "p3_8">ТОВАР В НАЯВНОСТІ</p>    
-        </div> -->
 
     {% endfor %}
 
@@ -118,58 +65,5 @@
 
     <p class="border" id="border"></p>
 
-
-    <script>
-
-        var count = 0
-        let current_cookie = document.cookie.split("=")[1]
-
-
-              
-        function counter(){
-            count++;
-            var outputElement = document.getElementById("count")
-            if (current_cookie.split(" ").length > 9){
-                outputElement.style.left = "477px"
-            }
-            
-            if (count >= 100){
-                count -= 1 
-            }
-
-            outputElement.textContent = current_cookie.split(" ").length
-        }
-        
-        function indicator(){
-            var element = document.getElementById("border")
-
-            element.style.display = "block"
-
-        }
-
-
-
-        function buy_1(){
-            current_cookie += "1" + " "
-            document.cookie = `product = ${current_cookie}; path = /`        
-            console.log(current_cookie)
-        }
-
-        function buy_2(){
-            current_cookie += "2" + " "
-            document.cookie = `product = ${current_cookie}; path = /`
-            console.log(current_cookie)
-        }
-
-    
-        function buy_3(){
-            current_cookie += "3" + " "
-            document.cookie = `product = ${current_cookie}; path = /`
-            console.log(current_cookie)
-        }
-
-        
-
-    </script>
 
 {% endblock %}

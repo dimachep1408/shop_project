@@ -62,40 +62,6 @@
             <p class = "p{{ product.id }}_7"></p>
             <p class="p{{ product.id }}_7_1">1 Тб</p>
         </div>
-    <!-- 
-        <img class = "img2" src="{{ url_for('redact.static', filename= 'static/images/image.png') }}" alt="redact">
-        <div class="div2">
-            <p class = "p2_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
-            <p class = "p2_2"><del>56 999 грн</del></p>
-            <p class = "disc_2">Знижка 19%</p>
-            <p class = "final_price_2">10 830 грн</p>
-            <button class = "button2_3"  onclick="javascript:indicator(); javascript:buy_2();javascript:counter()">КУПИТИ</button>
-            <p class = "p2_4">Ємність:</p>
-            <p class = "p2_5"></p>
-            <p class="p2_5_1">256 Гб</p>
-            <p class = "p2_6"></p>
-            <p class="p2_6_1">512 Гб</p>
-            <p class = "p2_7"></p>
-            <p class="p2_7_1">1 Тб</p>
-            <p class = "p2_8">ТОВАР В НАЯВНОСТІ</p>
-        </div>
-
-        <img class = "img3" src="{{ url_for('redact.static', filename= 'static/images/image.png') }}" alt="redact">
-        <div class = "div3">
-            <p class = "p3_1">iPhone 15 Pro Max 512GB Natural Titanium</p>
-            <p class = "p3_2"><del>66 999 грн</del></p>
-            <p class = "disc_3">Знижка 19%</p>
-            <p class = "final_price_3">12 730 грн</p>
-            <button class = "button3_3" onclick="javascript:indicator(); javascript:buy_3();javascript:counter()">КУПИТИ</button>
-            <p class = "p3_4">Ємність:</p>
-            <p class = "p3_5"></p>
-            <p class="p3_5_1">256 Гб</p>
-            <p class = "p3_6"></p>
-            <p class="p3_6_1">512 Гб</p>
-            <p class = "p3_7"></p>
-            <p class="p3_7_1">1 Тб</p>
-            <p class = "p3_8">ТОВАР В НАЯВНОСТІ</p>    
-        </div> -->
 
     {% endfor %}
 
@@ -136,58 +102,6 @@
         <button type = "submit" class = "btns" name = "rewrite"><img class = "rewrite21" id = "rewrite_btn" alt="in_the_open1" name = "rewrite21" src="{{ url_for('redact.static', filename= 'static/images/image3.png') }}"></button>
 
     </form>
-    <script>
 
-        var count = 0
-        let current_cookie = document.cookie.split("=")[1]
-
-
-              
-        function counter(){
-            count++;
-            var outputElement = document.getElementById("count")
-            if (current_cookie.split(" ").length > 9){
-                outputElement.style.left = "477px"
-            }
-            
-            if (count >= 100){
-                count -= 1 
-            }
-
-            outputElement.textContent = current_cookie.split(" ").length
-        }
-        
-        function indicator(){
-            var element = document.getElementById("border")
-
-            element.style.display = "block"
-
-        }
-
-
-
-        function buy_1(){
-            current_cookie += "1" + " "
-            document.cookie = `product = ${current_cookie}; path = /`        
-            console.log(current_cookie)
-        }
-
-        function buy_2(){
-            current_cookie += "2" + " "
-            document.cookie = `product = ${current_cookie}; path = /`
-            console.log(current_cookie)
-        }
-
-
-    
-        function buy_3(){
-            current_cookie += "3" + " "
-            document.cookie = `product = ${current_cookie}; path = /`
-            console.log(current_cookie)
-        }
-
-        
-
-    </script>
 
 {% endblock %}

@@ -26,20 +26,14 @@
     {% for product in products %}
 
         <img src="{{ url_for('shop.static', filename= 'static/images/' + product.image) }}" alt="basket" class="img{{product.id}}">
-    <!-- <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img2">
-    <img src="{{ url_for('basket.static', filename= 'static/images/image.png') }}" alt="basket" class="img3"> -->
-
         <p class="product{{product.id}}">{{ product.name }}...</p>
-    <!-- <p class="product2">iPhone 15 Pro Max 512GB Natural Titanium...</p>
-    <p class="product3">iPhone 15 Pro Max 1TB Natural Titanium...</p> -->
+
 
         <p class="price{{product.id}}">{{ product.price }} грн</p>
-    <!-- <p class="price2">56 999 грн</p>
-    <p class="price3">66 999 грн</p>     -->
+
     
         <p class="border{{product.id}}"></p>
-    <!-- <p class="border2"></p>
-    <p class="border3"></p> -->
+
 
     {% endfor %}
     <form method = "post">

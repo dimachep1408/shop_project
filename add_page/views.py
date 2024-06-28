@@ -37,8 +37,6 @@ def render_add():
         DATABASE.session.add(product)
         DATABASE.session.commit()
 
-        print(Product.query.all())
-
 
 
 
@@ -56,8 +54,5 @@ def render_add():
 
         return flask.redirect("/admin/")
 
-
-
-        print(DATABASE.session)
 
     return flask.render_template(template_name_or_list= "add.html", products = Product.query.all(), flag = flask.session.get('flag'))

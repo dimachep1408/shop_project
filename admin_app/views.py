@@ -13,20 +13,13 @@ def render_admin():
 
     
 
-
-
-
-
-
-    
-
     if flask.request.method == "POST":
         btn = flask.request.form.get("rewrite")
         button_delete = flask.request.form.get("delete")
 
         add_product = flask.request.form.get("add_btn")
 
-        print(add_product)
+
 
         if button_delete != None and btn == None and add_product == None:
 
@@ -67,9 +60,7 @@ def render_admin():
                                 product2 = Product.query.get(int(button_delete) + count) 
                                 # print("aushdbfiuaehbui" , int(str(product).split(",")[0].split("id - ")[1]))
                                 product2.id = count
-                                print(product2.id)
 
-                                print(count, index)
 
 
                                 count += 1
@@ -94,7 +85,7 @@ def render_admin():
 
 
             
-            print(Product.query.all())
+
 
 
 
@@ -107,7 +98,7 @@ def render_admin():
 
 
 
-            print(btn)
+
             return flask.redirect("/admin/redact/")
 
         if add_product != None and button_delete == None and btn == None:
@@ -122,7 +113,6 @@ def render_admin():
 
 
 
-            print(btn)
             return flask.redirect("/admin/redact/")
 
 
@@ -130,9 +120,6 @@ def render_admin():
 
 
     name = str(flask_login.current_user).split(":")[1]
-
-    # if flask.request.method == "POST":
-    #     return flask.redirect("/admin/redact/")
 
     
     users = User.query.filter_by(is_admin = True).all()
@@ -149,10 +136,8 @@ def render_admin():
         
 
     for nickname in nicknames:
-        print(nickname)
-        print(name)
 
-        if nickname == " " + name:
+        if nickname == name:
             return flask.render_template(template_name_or_list= "admin.html", log = name, products = Product.query.all())
     return flask.redirect("/shop/") 
 

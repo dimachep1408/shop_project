@@ -15,25 +15,6 @@ def render_shop():
     name = str(flask_login.current_user).split(":")[1]
 
 
-    # users = User.query.filter_by(is_admin = True).all()
-    
-    # nicknames = []
-
-    # print(users)
-
-    # for user in users:
-    #     nicknames.append(str(user).split(":")[1])
-
-    # for nickname in nicknames:
-    #     if nickname == name:
-    #         return flask.redirect("/admin/")
-
-
-
-
-
-
-
 
 
     return flask.render_template(template_name_or_list= "shop.html", log = name, products = Product.query.all())
