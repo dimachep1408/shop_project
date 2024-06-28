@@ -4,7 +4,7 @@
 ## Учасники команди
 
 - [Dima Chepikov(Team Lead)](https://github.com/dimachep1408)
-- [Renat Belei](https://github.com/renat)  
+- [Renat Belei](https://github.com/renatBelei)  
 - [Mihail Barilo](https://github.com/Mbarilo)
 
 ## Опис проекту
