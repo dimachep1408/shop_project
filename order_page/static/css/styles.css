@@ -368,7 +368,7 @@ img{
     z-index: 1000;
 }
 
-#ramkaImageModal{
+#ramkaNameModal{
     position: absolute;
     width: 450;
     height: 75;
@@ -379,29 +379,29 @@ img{
     border-radius: 15px;
 }
 
-#File{
+#Name{
     position: absolute;
-    left: 20;
-    top: 20;
+    left: 0;
+    top: 0;
     z-index: 1000;
     font-size: 25;
     width: 450;
     height: 75;
-
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 
-#ramkaNameProduct{
+#ramkaNameModal{
     position: absolute;
     width: 450;
     height: 75;
-    left: 740;
-    top: 275;
+    left: 720;
+    top: 175;
     z-index: 1000;
-    border-radius: 15px;
 }
 
-.textNameModal{
+.NameTextModal{
     position: absolute;
     width: 450;
     height: 30;
@@ -413,7 +413,7 @@ img{
 
 }
 
-.inputNameModal{
+.inputNameProduct{
     position: absolute;
     z-index: 1000;
     font-size: 25;
@@ -423,53 +423,53 @@ img{
 }
 
 
-#ramkaPriceProduct{
+#ramkaLastnameModal{
     position: absolute;
     width: 450;
     height: 75;
-    left: 740;
-    top: 275;
+    top: -100;
+    left: -2;
     z-index: 1000;
     border-radius: 15px;
+    
 }
 
-.textPriceModal{
+.textLastnameModal{
     position: absolute;
     width: 450;
     height: 30;
     font-weight: 400;
     font-family: sans-serif;
     font-size: 25;
-    top: -0;
     z-index: 1000;
-    left: 740;
+    left: 720;
     top: 355;
 
 }
     
-.inputPriceModal{
+.inputLastnameModal{
     position: absolute;
     z-index: 1000;
     font-size: 25;
     width: 450;
     height: 75;
     border-radius: 15px;
-    left: 740;
-    top: 425;
+    left: 720;
+    top: 420;
+    
 }
 
 
-#ramkaDiscountProduct{
+#ramkaPhoneProduct{
     position: absolute;
     width: 450;
     height: 75;
-    left: 740;
-    top: 275;
+    left: -2;
     z-index: 1000;
     border-radius: 15px;
 }
 
-.textDiscountModal{
+.textPhoneModal{
     position: absolute;
     width: 450;
     height: 30;
@@ -478,21 +478,202 @@ img{
     font-size: 25;
     top: -0;
     z-index: 1000;
-    left: 740;
-    top: 505;
+    left: 720;
+    top: 390;
 
 }
     
-.inputDiscountModal{
+.inputPhoneModal{
     position: absolute;
     z-index: 1000;
     font-size: 25;
     width: 450;
     height: 75;
     border-radius: 15px;
-    left: 740;
-    top: 575;
+    left: 720;
+    top: 460;
 }
+
+
+
+#ramkaProduct{
+    position: absolute;
+    width: 450;
+    height: 75;
+    left: -2;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.textModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    top: -0;
+    z-index: 1000;
+    left: 720;
+    top: 520;
+
+}
+    
+.inputModal{
+    position: absolute;
+    z-index: 1000;
+    font-size: 25;
+    width: 450;
+    height: 75;
+    border-radius: 15px;
+    left: 720;
+    top: 600;
+}
+
+
+
+
+#ramkaEmailProduct{
+    position: absolute;
+    width: 450;
+    height: 75;
+    left: -2;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.textEmailModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    top: -0;
+    z-index: 1000;
+    left: 720;
+    top: 520;
+
+}
+    
+.inputEmailModal{
+    position: absolute;
+    z-index: 1000;
+    font-size: 25;
+    width: 450;
+    height: 75;
+    border-radius: 15px;
+    left: 720;
+    top: 600;
+}
+
+#ramkaTownProduct{
+    position: absolute;
+    width: 450;
+    height: 75;
+    left: -2;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.textTownModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    top: -0;
+    z-index: 1000;
+    left: 720;
+    top: 660;
+
+}
+    
+.inputTownModal{
+    position: absolute;
+    z-index: 1000;
+    font-size: 25;
+    width: 450;
+    height: 75;
+    border-radius: 15px;
+    left: 720;
+    top: 720;
+}
+
+
+
+#ramkaNovaPostaProduct{
+    position: absolute;
+    width: 450;
+    height: 75;
+    left: -2;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.textNovaPostaModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    top: -0;
+    z-index: 1000;
+    left: 720;
+    top: 780 ;
+
+}
+    
+.inputNovaPostaModal{
+    position: absolute;
+    z-index: 1000;
+    font-size: 25;
+    width: 450;
+    height: 75;
+    border-radius: 15px;
+    left: 720;
+    top: 840;
+}
+
+
+
+#ramkaAdditionalProduct{
+    position: absolute;
+    width: 450;
+    height: 75;
+    left: -2;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.textAdditionalModal{
+    position: absolute;
+    width: 450;
+    height: 30;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 25;
+    top: -0;
+    z-index: 1000;
+    left: 720;
+    top: 900 ;
+
+}
+    
+.inputAdditionalModal{
+    position: absolute;
+    z-index: 1000;
+    font-size: 25;
+    width: 450;
+    height: 75;
+    border-radius: 15px;
+    left: 720;
+    top: 970;
+}
+
+
 
 
 #ButtonModal{
@@ -503,19 +684,21 @@ img{
     font-size: 25;
     z-index: 1000;
     left: 750;
-    top: 725;
+    top: 1175;
     text-decoration: underline;
     border: none;
     background-color: white;
 
 }
 
+
+
 #BorderModal{
     position: absolute;
     border: 3px solid black;
     border-radius: 25px;
     width: 700;
-    height: 750;
+    height: 1200;
     z-index: 999;
     background-color: white;
     left: 600;
@@ -524,7 +707,7 @@ img{
 
 
 
-body *{
+body *:not(#Form):not(#BorderModal):not(#InputModal):not(#TextModal):not(#ButtonModal):not(#ramkaNameModal):not(.NameTextModal):not(#Name):not(#ramkaNameModal):not(.textNameModal):not(.inputNameModal):not(#ramkaLastnameModal):not(.textLastnameModal):not(.inputLastnameModal):not(#ramkaPhoneModal):not(.inputPhoneModal):not(.textPhoneModal):not(#ramkaEmailModal):not(.inputEmailModal):not(.textEmailModal):not(#ramkaTownModal):not(.inputTownModal):not(.textTownModal):not(#ramkaNovaPostaModal):not(.inputNovaPostaModal):not(.textNovaPostaModal):not(#ramkaAdditionalModal):not(.inputAdditionalModal):not(.textAdditionalModal){
     filter: blur(2px);
     pointer-events: none;
 }

@@ -6,6 +6,8 @@ import pandas
 from admin_app.models import Product
 from project.settings import DATABASE
 from project.settings import shop
+import flask_login
+
 
 def render_redact():
     global product
@@ -28,7 +30,7 @@ def render_redact():
 
     print(Product.query.all())
 
-    name = flask.session.get('log')
+    name = str(flask_login.current_user).split(":")[1]
 
 
     # Получаем абсолютный путь к папке images внутри admin_page/static

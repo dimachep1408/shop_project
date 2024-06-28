@@ -2,37 +2,58 @@
 
 {% block title %}Page Home{% endblock %}
 
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('order.static', filename = '/static/css/styles.css')}}"/>
+{% endblock %}
 
 {% block content %}
 
     <h2>{{log}}</h2>
-    <a class = "a1" href="http://127.0.0.1:5000/">HOME</a>
-    <a class="a2" href="http://127.0.0.1:5000/shop/">SHOP</a>
-    <a class="a3" href="http://127.0.0.1:5000/basket/">CART</a>
-    <a class="a4" href="http://127.0.0.1:5000/contacts/">CONTACTS</a>
-    <a class="a5" href="http://127.0.0.1:5000/admin/">ADMIN</a>
+    <a class = "a1" href="/">HOME</a>
+    <a class="a2" href="/shop/">SHOP</a>
+    <a class="a3" href="/basket/">CART</a>
+    <a class="a4" href="/contacts/">CONTACTS</a>
+    <a class="a5" href="/admin/">ADMIN</a>
 
     <form method="POST" enctype="multipart/form-data" id="Form">
 
-        <div id = "ramkaImageModal">
-            <p class = "imageTextModal">IMAGE PRODUCT:</p>
-            <input type="file" accept="image/*" id="File" name="Image" class="fileInput1">
+        <div id = "ramkaNameModal">
+            <p class = "NameTextModal">ІМ'Я:</p>
+            <input type="text" id="Name" class="fileInput1">
         </div>
 
-        <div id = "ramkaNameProduct">
-            <p class = "textNameModal">NAME PRODUCT:</p>
-            <input type="text" class ="inputNameModal" name="Name">
+        <div id = "ramkaLastnameModal">
+            <p class = "textLastnameModal">ПРИЗВИЩЕ:</p>
+            <input type="text" class ="inputLastnameModal" name="Lastname">
         </div>
 
-        <div id = "ramkaPriceModal">
-            <p class = "textPriceModal">PRICE PRODUCT:</p>
-            <input type="text" class ="inputPriceModal" name="Price">
+        <div id = "ramkaPhoneModal">
+            <p class = "textPhoneModal">ТЕЛЕФОН ЗАМОВНИКА:</p>
+            <input type="text" class ="inputPhoneModal" name="Phone">
         </div>
 
-        <div id = "ramkaDiscountModal">
-            <p class = "textDiscountModal">DISCOUNT PRODUCT:</p>
-            <input type="text" class ="inputDiscountModal" name="Discount">
+        <div id = "ramkaEmailModal">
+            <p class = "textEmailModal">EMAIL ЗАМОВНИКА:</p>
+            <input type="text" class ="inputEmailModal" name="Email">
         </div>
+
+
+        <div id = "ramkaTownModal">
+            <p class = "textTownModal">МІСТО ОТРИМУВАЧА:</p>
+            <input type="text" class ="inputTownModal" name="Town">
+        </div>
+
+    
+        <div id = "ramkaNovaPostaModal">
+            <p class = "textNovaPostaModal">ВІДДІЛЕННЯ НОВОЇ ПОШТИ:</p>
+            <input type="text" class ="inputNovaPostaModal" name="NovaPosta">
+        </div>    
+
+        <div id = "ramkaAdditionalModal">
+            <p class = "textAdditionalModal">ДОДАТКОВІ ПОБАЖАННЯ:</p>
+            <textarea type="text" class ="inputAdditionalModal" name="Additional"></textarea>
+        </div>    
+
         <p id="BorderModal"> </p>
         <button id="ButtonModal">SEND</button>
     </form>

@@ -5,13 +5,14 @@ import os
 import pandas
 from admin_app.models import Product
 from project.settings import DATABASE
+import flask_login
 
 def render_shop():
     global product
     
 
 
-    name =f" {flask.session.get('log')}"
+    name = str(flask_login.current_user).split(":")[1]
 
 
     # users = User.query.filter_by(is_admin = True).all()

@@ -5,7 +5,7 @@ import os
 import pandas
 from .models import Product
 from project.settings import DATABASE
-
+import flask_login
 
 
 def render_admin():
@@ -129,7 +129,7 @@ def render_admin():
 
 
 
-    name = flask.session.get('log')
+    name = str(flask_login.current_user).split(":")[1]
 
     # if flask.request.method == "POST":
     #     return flask.redirect("/admin/redact/")
